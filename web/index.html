@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="./css/index.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/modalBox.css">
+    <script src="./js/jquery-3.5.1.js"></script>
+    <script src="./js/index.js"></script>
+    <script type="text/javascript" src="./js/modalBox.js"></script>
+
+    <title>首页</title>
+</head>
+
+<body>
+<div id="content">
+
+    <div id="header">
+        <h1 id="logo">线上预约挂号</h1>
+        <h3 id="loginInfo"></h3>
+        <a id="logout">退出登录</a>
+    </div>
+
+    <div id="section">
+        <div id="search">
+                <span>
+                    医院：
+                    <select id="hospital"></select>
+                </span>
+            <span>
+                    科室：
+                    <select id="departmentType"></select>
+                </span>
+            <span>
+                    科目：
+                    <select id="department"></select>
+                </span>
+
+            <span>
+                    状态：
+                    <select id="status">
+                        <option value="no">请选择状态</option>
+                        <option value="0">未就诊</option>
+                        <option value="1">已取消</option>
+                        <option value="2">已就诊</option>
+                    </select>
+                </span>
+            <span>
+                    预约日期：
+                    <input style="width: 180px" type="date" id="registerTime"/>
+                </span>
+
+            <button id="reset">重置</button>
+            <button id="searchBtn">搜素</button>
+            <button id="registerBtn">挂号</button>
+        </div>
+        <div>
+            <table id="tableData">
+                <thead>
+                <tr>
+                    <th scope="col" colspan="8" style="text-align: center">挂号预约列表</th>
+                </tr>
+                <tr>
+                    <th>医院名称</th>
+                    <th>科室</th>
+                    <th>科目</th>
+                    <th>责任医师</th>
+                    <th>预约人</th>
+                    <th>预约时间</th>
+                    <th>状态</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody id="tableBody"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id="footer">
+        <p>牧一 © 2022版 线上预约挂号</p>
+    </div>
+
+    <!-- 模态框 -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="title">挂号预约</h2>
+                <span id="closeBtn" class="close">×</span>
+            </div>
+            <div class="modal-body">
+                <form id="registerForm">
+                    <div>
+                        医&emsp;&emsp;院：
+                        <select name="hospital"></select>
+                    </div>
+                    <div>
+                        科&emsp;&emsp;室：
+                        <select name="departmentType"></select>
+                    </div>
+                    <div>
+                        科&emsp;&emsp;目：
+                        <select name="department"></select>
+                    </div>
+                    <div>
+                        预约日期：
+                        <input name="registerTime" type="datetime-local"/>
+                    </div>
+                    <div>
+                        主治医师：
+                        <select name="doctor"></select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button id="submitBtn">预约</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 模态框 -->
+    <div id="myModalDetail" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>预约详情</h2>
+                <span id="closeBtnDetail" class="close">×</span>
+            </div>
+            <div class="modal-body">
+                <form id="detailForm">
+                    <div>
+                        医&emsp;&emsp;院：
+                        <input name="hospital" disabled/>
+                    </div>
+                    <div>
+                        科&emsp;&emsp;室：
+                        <input name="departmentType" disabled/>
+                    </div>
+                    <div>
+                        科&emsp;&emsp;目：
+                        <input name="department" disabled/>
+                    </div>
+                    <div>
+                        预约日期：
+                        <input name="registerTime" disabled/>
+                    </div>
+                    <div>
+                        主治医师：
+                        <input name="doctor" disabled/>
+                    </div>
+                    <div>
+                        预约用户：
+                        <input style="margin-bottom: 20px" name="userName" disabled/>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>

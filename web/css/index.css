@@ -1,0 +1,97 @@
+#content {
+    position: fixed;
+    left: 0px;
+    right: 0px;
+}
+#header {
+    background-color: #eeeeee;
+    color: black;
+    text-align: center;
+    padding: 5px;
+}
+
+#logo {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+#loginInfo {
+    margin-right: 12rem;
+    text-align: end;
+    display: inline-block;
+}
+
+a {
+    color: #00dd60;
+    cursor: pointer;
+}
+
+#section {
+    text-align: center;
+    padding: 10px;
+    overflow: auto;
+}
+
+#search select {
+    width: 180px;
+    display: inline-block;
+}
+
+#search span {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#search button {
+    width: 100px;
+    display: inline-block;
+    border-radius: 5px;
+    border: 1px solid #adadad;
+    cursor: pointer;
+    letter-spacing: 4px;
+}
+#reset {
+    margin-left: 20px;
+}
+#searchBtn {
+    color: white;
+    background: #00dd60;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    border-collapse: collapse;
+    /*让靠在一起的单元格只显示一个边框，边框不进行叠加*/
+}
+
+table tr th {
+    border: solid 1px #ccc;
+    height: 30px;
+    width: 200px;
+    background-color: #eee;
+}
+
+table tr td {
+    border: solid 1px #ccc;
+    height: 30px;
+    text-align: center;
+}
+
+table tr:hover {
+    background-color: #FEE;
+}
+
+#footer {
+    background-color: black;
+    color: white;
+    clear: both;
+    text-align: center;
+    position: fixed;
+    left: 5px;
+    right: 5px;
+    bottom: 8px;
+}
